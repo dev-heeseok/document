@@ -26,3 +26,19 @@ git config --global user.name dev.heeseok
 # user.email 수정하기
 git config --global user.email dev.heeseok@gmail.com
 ```
+
+## LFS 사용하기
+
+Git 에서는 대용량 파일을 관리하기 위해 LFS(Large File Storage)를 지원하고 있다. Github 의 경우 50mb 는 warning, 100mb 는 error 가 발생하는데, Git LFS 를 사용하면 아주 큰 파일에 대해서도 Git push/pull 이 가능해진다.
+
+```sh
+# git lfs 초기화
+git lfs install
+
+# lfs tracking
+git lfs track '$TRACK_PATTERN' # ex) git lfs track '*.zip'
+
+# lfs tracking file 
+git lfs ls-files
+# echo > b21715d2a2 * Python/파이썬을 이용한 자동화 스크립트/과제/과제 3번.docx
+```
